@@ -10,7 +10,6 @@
 template <class Type>
 Node<Type>::Node()
 {
-	this->value = 0;
 	this->pointers = nullptr;
 
 }

@@ -6,14 +6,19 @@
  */
 
 #include "NodeController.h"
+#include <iostream>
+using namespace std;
 
-NodeController::NodeController() {
-	// TODO Auto-generated constructor stub
+NodeController::NodeController()
+{
+	stringNode.setValue("asdf");
 
 }
 
-NodeController::~NodeController() {
-	// TODO Auto-generated destructor stub
+NodeController::~NodeController()
+{
+
+
 }
 
 void NodeController :: start()

@@ -1,0 +1,28 @@
+/*
+ * Node.h
+ *
+ *  Created on: Jan 27, 2016
+ *      Author: jlin3312
+ */
+
+#ifndef SRC_MODEL_NODE_H_
+#define SRC_MODEL_NODE_H_
+
+
+template<class Type>
+class Node
+{
+private:
+	Type value;
+Node * pointers;//A reference to the array of nodes its connected to.
+public:
+	Node();
+	Node(Type value);
+	virtual ~Node();
+	Type getValue();
+	void setValue(Type value);
+	Node * getPointers();
+
+};
+
+#endif /* SRC_MODEL_NODE_H_ */

@@ -7,7 +7,7 @@
 
 #ifndef SRC_MODEL_NODE_H_
 #define SRC_MODEL_NODE_H_
-
+#include <iostream>
 
 template<class Type>
 class Node

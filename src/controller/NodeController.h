@@ -10,6 +10,8 @@
 #include <string>
 #include "../model/Node.cpp"
 #include "../model/Node.h"
+#include "../model/ArrayNode.cpp"
+#include "../model/ArrayNode.h"
 
 using namespace std;
 
@@ -18,6 +20,8 @@ class NodeController
 private:
 	Node<string> stringNode;
 	Node<int> intNode;
+	ArrayNode<string> stringArrayNode;
+	ArrayNode<string> otherArrayNode;
 public:
 	NodeController();
 	void start();

@@ -4,7 +4,7 @@
  *  Created on: Jan 27, 2016
  *      Author: jlin3312
  */
-#include <iostream>
+
 #include "Node.h"
 
 template <class Type>

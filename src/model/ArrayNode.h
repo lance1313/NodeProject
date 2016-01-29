@@ -9,6 +9,7 @@
 #define SRC_MODEL_ARRAYNODE_H_
 
 #include "Node.h"
+
 template <class Type>
 class ArrayNode: public Node<Type>
 {
@@ -19,6 +20,8 @@ public:
 	ArrayNode(Type value);
 	ArrayNode(Type value, ArrayNode * next);
 	virtual ~ArrayNode();
+	ArrayNode * getNext();
+	void setNext(ArrayNode * next);
 };
 
 #endif /* SRC_MODEL_ARRAYNODE_H_ */

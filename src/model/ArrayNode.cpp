@@ -32,7 +32,8 @@ ArrayNode<Type> :: ArrayNode(Type value, ArrayNode<Type> * next) : Node<Type>(va
 }
 
 template <class Type>
-ArrayNode<Type>::~ArrayNode() {
+ArrayNode<Type>::~ArrayNode()
+{
 	// TODO Auto-generated destructor stub
 }
 

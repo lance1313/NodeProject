@@ -48,6 +48,20 @@ Type* CTECArray<Type> ::  get(int position)
 
 	else
 	{
+		ArrayNode<Type> * current = head;
+		for(int spot = 0; spot <= position; spot++)
+		{
+			//Not in the right spot go to next spot.
+			if(spot != position)
+			{
+				current = current->getNext();
+			}
+
+			else
+			{
+				return current->getValue();
+			}
+		}
 
 	}
 }

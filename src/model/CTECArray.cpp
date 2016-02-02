@@ -31,6 +31,30 @@ int CTECArray<Type> ::  getSize()
 template <class Type>
 void CTECArray<Type> ::  set(int position, Type value)
 {
+	if(position >= size || position < 0)
+		{
+			//Out of bounds d must do somthing about it.
+			cerr << "position value is out of bounds :(" << endl;
+
+		}
+
+	else
+	{
+		ArrayNode<Type> * current = head;
+		for(int spot = 0; spot <= position; spot++)
+		{
+			if(spot != position)
+			{
+				current = current->getNext();
+			}
+
+			else
+			{
+				current->setValue();
+			}
+
+		}
+	}
 
 }
 

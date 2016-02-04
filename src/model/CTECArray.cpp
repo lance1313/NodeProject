@@ -41,7 +41,9 @@ for(int index = 0; index < size; index++)
 	}
 
 }
-
+/**
+ * this destroys unused nodes int the array.
+ */
 template <class Type>
 CTECArray<Type>::~CTECArray()
 {
@@ -67,7 +69,9 @@ CTECArray<Type>::~CTECArray()
 	delete head;
 }
 
-
+/**
+ * this gets the size of the array.
+ */
 template <class Type>
 int CTECArray<Type> ::  getSize()
 {
@@ -103,6 +107,9 @@ void CTECArray<Type> ::  set(int position, Type value)
 
 }
 
+/**
+ * this gets a value from the array
+ */
 template <class Type>
 Type* CTECArray<Type> ::  get(int position)
 {

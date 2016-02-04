@@ -45,7 +45,26 @@ for(int index = 0; index < size; index++)
 template <class Type>
 CTECArray<Type>::~CTECArray()
 {
+	ArrayNode<Type> * deleteMe = head;
+	for(int index = 0; index < size; index++)
+	{
+		//check ArrayNode has pointer to nxt.
+		if(deleteMe->getNext() != nullptr)
+		{
+			//set head to nxt pointer
+			head = deleteMe->getNext();
+			//delete the pointer
+			deleteMe->setNext(nullptr);
 
+		}
+		//delete the ArrayNode
+					delete deleteMe;
+					//point to the next Node.
+					deleteMe = head;
+
+	}
+
+	delete head;
 }
 
 

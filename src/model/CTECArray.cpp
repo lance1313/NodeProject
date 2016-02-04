@@ -14,11 +14,30 @@ CTECArray<Type>::CTECArray(int size)
 {
 	this->size = size;
 	this->head = nullptr;
-//Defencive code
+//Defensive code
 	if(size <= 0 )
 	{
 	cerr << "That is not allowed:(" << endl;
 	return;
+	}
+
+for(int index = 0; index < size; index++)
+	{
+	if(head != nullptr)
+	{
+		//regular ArrayNode being made
+		ArrayNode<Type> nextNode;
+		//
+		nextNode.setNext(head);
+		//set head to address of next node
+		this->head = &nextNode;
+	}
+	else
+	{
+	//first ArrayNode needs to be made.
+	ArrayNode<Type> firstNode;
+	this->head = &firstNode;
+	}
 	}
 
 }
@@ -26,7 +45,7 @@ CTECArray<Type>::CTECArray(int size)
 template <class Type>
 CTECArray<Type>::~CTECArray()
 {
-	// TODO Auto-generated destructor stub
+
 }
 
 

@@ -118,14 +118,14 @@ void CTECArray<Type> ::  set(int position, Type value)
  */
 
 template <class Type>
-Type* CTECArray<Type> ::  get(int position)
+Type CTECArray<Type> ::  get(int position)
 {
 	//we need to do bounds checking so we don't crash the program.
 	if(position >= size || position < 0)
 	{
 		//Out of bounds d must do somthing about it.
 		cerr << "position value is out of bounds :(" << endl;
-		return nullptr;
+		//return nullptr;
 
 	}
 

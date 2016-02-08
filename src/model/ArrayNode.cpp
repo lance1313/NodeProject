@@ -7,7 +7,9 @@
 
 #include "ArrayNode.h"
 //#include<iostream>
-
+/**
+ *
+ */
 template <class Type>
 ArrayNode<Type>::ArrayNode() : Node<Type>()//a super construtor.
 {
@@ -15,8 +17,11 @@ ArrayNode<Type>::ArrayNode() : Node<Type>()//a super construtor.
 	//this->pointers = nullptr;
 
 }
+/**
+ * <param>const Type shows that
+ */
 template <class Type>
-ArrayNode<Type> :: ArrayNode(Type value) : Node<Type>()
+ArrayNode<Type> :: ArrayNode(const Type& value) : Node<Type>()
 {
 	this->next = nullptr;
 	this->value = value;
@@ -25,7 +30,7 @@ ArrayNode<Type> :: ArrayNode(Type value) : Node<Type>()
 
 
 template <class Type>
-ArrayNode<Type> :: ArrayNode(Type value, ArrayNode<Type> * next) : Node<Type>(value)
+ArrayNode<Type> :: ArrayNode(const Type& value, ArrayNode<Type> * next) : Node<Type>(value)
 {
 	this->next = next;
 	this->value = value;

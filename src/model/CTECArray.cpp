@@ -9,6 +9,9 @@
 #include <iostream>
 using namespace std;
 
+/**
+ * this initializes the other methods.
+ */
 template <class Type>
 CTECArray<Type>::CTECArray(int size)
 {
@@ -27,7 +30,7 @@ for(int index = 0; index < size; index++)
 	{
 		//regular ArrayNode being made
 		ArrayNode<Type> nextNode;
-		//
+		//::
 		nextNode.setNext(head);
 		//set head to address of next node
 		this->head = &nextNode;
@@ -43,6 +46,7 @@ for(int index = 0; index < size; index++)
 }
 /**
  * this destroys unused nodes int the array.
+ * this is the destrutor.
  */
 template <class Type>
 CTECArray<Type>::~CTECArray()
@@ -71,6 +75,7 @@ CTECArray<Type>::~CTECArray()
 
 /**
  * this gets the size of the array.
+ * this gives the user the value you need.
  */
 template <class Type>
 int CTECArray<Type> ::  getSize()
@@ -109,7 +114,9 @@ void CTECArray<Type> ::  set(int position, Type value)
 
 /**
  * this gets a value from the array
+ * <param> int position this is the spot in the array.
  */
+
 template <class Type>
 Type* CTECArray<Type> ::  get(int position)
 {

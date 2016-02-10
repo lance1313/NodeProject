@@ -11,6 +11,7 @@
 #include "../model/Node.cpp"
 #include "../model/Node.h"
 #include "../model/ArrayNode.cpp"
+#include "../model/CTECArray.cpp"
 #include "../model/ArrayNode.h"
 
 using namespace std;
@@ -18,6 +19,7 @@ using namespace std;
 class NodeController
 {
 private:
+	CTECArray<int> * ints;
 	Node<string> stringNode;
 	Node<int> intNode;
 	ArrayNode<string> stringArrayNode;

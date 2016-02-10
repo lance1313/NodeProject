@@ -27,18 +27,18 @@ for(int index = 0; index < size; index++)
 	if(head != nullptr)
 	{
 		//regular ArrayNode being made
-		ArrayNode<Type> * nextNode = new ArrayNode<Type>();
+		ArrayNode<Type> * nextNode = new ArrayNode<Type>();//Pointer to make space for the nodes so they are available  off the stack
 		//::
 		nextNode->setNext(head);
 		//set head to address of next node
 		this->head = nextNode;
 	}
-	else
-	{
+		else
+		{
 	//first ArrayNode needs to be made.
 	ArrayNode<Type> * firstNode = new ArrayNode<Type>();
 	this->head = firstNode;
-	}
+		}
 	}
 
 }
@@ -95,11 +95,10 @@ void CTECArray<Type> ::  set(int position,const Type& value)
 
 			else
 			{
-				current->setValue();
+				current->setValue(value);
 			}
 
 		}
-//	}
 
 }
 

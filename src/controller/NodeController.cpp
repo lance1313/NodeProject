@@ -6,6 +6,7 @@
  */
 
 #include "NodeController.h"
+
 #include <iostream>
 using namespace std;
 
@@ -13,6 +14,7 @@ NodeController::NodeController()
 {
 	stringNode.setValue("asdf");
 	intNode.setValue(99);
+	ints = new CTECArray<int>(5);
 
 	stringArrayNode.setValue("Words in here");
 	otherArrayNode.setValue("linked node");
@@ -28,8 +30,13 @@ NodeController::~NodeController()
 
 void NodeController :: start()
 {
-	cout << "The contents of string node are " << stringNode.getValue() << endl;
-	cout << "The content of the stringArrayNode are: " << stringArrayNode.getValue() << endl;
-	cout << "This is the new value of stringArrayNode: " << (*stringArrayNode.getNext()).getValue() << endl;
+	for(int index = 0; index < ints->getSize(); index++)
+	{
+		ints->set(index, (index *23));
+	}
+	for(int index =ints->getSize()-1; index >= 0; index--)
+	{
+		cout << "the contents of ints is " << index << " are: " << ints->get(index) << endl;
+	}
 }
 

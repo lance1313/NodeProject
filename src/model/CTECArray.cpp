@@ -7,6 +7,8 @@
 
 #include "CTECArray.h"
 #include <iostream>
+#include <assert.h>
+
 using namespace std;
 
 /**
@@ -18,28 +20,24 @@ CTECArray<Type>::CTECArray(int size)
 	this->size = size;
 	this->head = nullptr;
 //Defensive code
-	if(size <= 0 )
-	{
-	cerr << "That is not allowed:(" << endl;
-	return;
-	}
+	assert(size >0);
 
 for(int index = 0; index < size; index++)
 	{
 	if(head != nullptr)
 	{
 		//regular ArrayNode being made
-		ArrayNode<Type> nextNode;
+		ArrayNode<Type> * nextNode = new ArrayNode<Type>();
 		//::
-		nextNode.setNext(head);
+		nextNode->setNext(head);
 		//set head to address of next node
-		this->head = &nextNode;
+		this->head = nextNode;
 	}
 	else
 	{
 	//first ArrayNode needs to be made.
-	ArrayNode<Type> firstNode;
-	this->head = &firstNode;
+	ArrayNode<Type> * firstNode = new ArrayNode<Type>();
+	this->head = firstNode;
 	}
 	}
 
@@ -83,17 +81,10 @@ int CTECArray<Type> ::  getSize()
 	return this->size;
 }
 template <class Type>
-void CTECArray<Type> ::  set(int position, Type value)
+void CTECArray<Type> ::  set(int position,const Type& value)
 {
-	if(position >= size || position < 0)
-		{
-			//Out of bounds d must do somthing about it.
-			cerr << "position value is out of bounds :(" << endl;
 
-		}
-
-	else
-	{
+	assert(position < size && position >= 0);
 		ArrayNode<Type> * current = head;
 		for(int spot = 0; spot <= position; spot++)
 		{
@@ -108,7 +99,7 @@ void CTECArray<Type> ::  set(int position, Type value)
 			}
 
 		}
-	}
+//	}
 
 }
 
@@ -120,17 +111,8 @@ void CTECArray<Type> ::  set(int position, Type value)
 template <class Type>
 Type CTECArray<Type> ::  get(int position)
 {
-	//we need to do bounds checking so we don't crash the program.
-	if(position >= size || position < 0)
-	{
-		//Out of bounds d must do somthing about it.
-		cerr << "position value is out of bounds :(" << endl;
-		//return nullptr;
-
-	}
-
-	else
-	{
+	//I'm out of bounds and need to do somthing about it.
+	assert(position < size && position >= 0);
 		ArrayNode<Type> * current = head;
 		for(int spot = 0; spot <= position; spot++)
 		{
@@ -146,7 +128,7 @@ Type CTECArray<Type> ::  get(int position)
 			}
 		}
 
-	}
+
 }
 
 

@@ -71,7 +71,10 @@ CTECArray<Type>::~CTECArray()
 	delete head;
 }
 
-/**
+/**+
+ *
+ * .
+ *
  * this gets the size of the array.
  * this gives the user the value you need.
  */

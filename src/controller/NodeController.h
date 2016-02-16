@@ -13,6 +13,7 @@
 #include "../model/ArrayNode.cpp"
 #include "../model/CTECArray.cpp"
 #include "../model/ArrayNode.h"
+#include "../model/Timer.h"
 
 using namespace std;
 
@@ -24,6 +25,7 @@ private:
 	Node<int> intNode;
 	ArrayNode<string> stringArrayNode;
 	ArrayNode<string> otherArrayNode;
+	Timer arrayTimer;
 public:
 	NodeController();
 	void start();

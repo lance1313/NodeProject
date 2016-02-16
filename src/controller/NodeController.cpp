@@ -30,6 +30,7 @@ NodeController::~NodeController()
 
 void NodeController :: start()
 {
+	arrayTimer.startTimer();
 	for(int index = 0; index < ints->getSize(); index++)
 	{
 		ints->set(index, (index *23));
@@ -38,5 +39,7 @@ void NodeController :: start()
 	{
 		cout << "the contents of ints is " << index << " are: " << ints->get(index) << endl;
 	}
+	arrayTimer.stopTimer();
+	arrayTimer.displayTimerInformation();
 }
 

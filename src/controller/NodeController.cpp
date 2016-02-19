@@ -9,7 +9,9 @@
 
 #include <iostream>
 using namespace std;
-
+/**construtor to initialize variables
+ *
+ */
 NodeController::NodeController()
 {
 	stringNode.setValue("asdf");
@@ -21,13 +23,9 @@ NodeController::NodeController()
 	stringArrayNode.setNext(&otherArrayNode);
 
 }
-
-NodeController::~NodeController()
-{
-
-
-}
-
+/**
+ *this method does a recursion to display either fibonacci number or a factorial.
+ */
 void NodeController :: start()
 {
 	arrayTimer.startTimer();
@@ -43,3 +41,9 @@ void NodeController :: start()
 	arrayTimer.displayTimerInformation();
 }
 
+
+NodeController::~NodeController()
+{
+
+
+}

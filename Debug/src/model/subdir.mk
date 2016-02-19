@@ -6,18 +6,21 @@
 CPP_SRCS += \
 ../src/model/ArrayNode.cpp \
 ../src/model/CTECArray.cpp \
+../src/model/CTECList.cpp \
 ../src/model/Node.cpp \
 ../src/model/Timer.cpp 
 
 OBJS += \
 ./src/model/ArrayNode.o \
 ./src/model/CTECArray.o \
+./src/model/CTECList.o \
 ./src/model/Node.o \
 ./src/model/Timer.o 
 
 CPP_DEPS += \
 ./src/model/ArrayNode.d \
 ./src/model/CTECArray.d \
+./src/model/CTECList.d \
 ./src/model/Node.d \
 ./src/model/Timer.d 
 

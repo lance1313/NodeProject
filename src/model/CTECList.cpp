@@ -21,37 +21,68 @@ CTECList<Type>::~CTECList()
 }
 
 template <class Type>
-int CTECList<Type>::getSize()
+int CTECList<Type>::setSize()
 {
 
 }
 
 template <class Type>
-CTECList<Type>::remove()
+Type CTECList<Type>::removeFromFront()
 {
 
 }
 
 template <class Type>
-CTECList<Type>::set()
+Type CTECList<Type>::removeFromEnd()
 {
 
 }
 
 template <class Type>
-CTECList<Type>::get()
+Type CTECList<Type>::removeFromIndex()
 {
 
 }
 
 template <class Type>
-void CTECList<Type>::add()
+Type CTECList<Type>::set(int index, const Type& value)
+{
+
+}
+
+
+template <class Type>
+Type CTECList<Type>::getFront()
 {
 
 }
 
 template <class Type>
-void CTECList<Type>::add()
+Type CTECList<Type>::getEnd()
+{
+
+}
+
+template <class Type>
+Type CTECList<Type>::getFromIndex(int index)
+{
+
+}
+
+template <class Type>
+void CTECList<Type>::addToFront()
+{
+
+}
+
+template <class Type>
+void CTECList<Type>::addToEnd()
+{
+
+}
+
+template <class Type>
+void CTECList<Type>::addToIndex()
 {
 
 }

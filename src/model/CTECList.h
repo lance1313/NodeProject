@@ -19,12 +19,18 @@ ArrayNode<Type> * tail;
 
 public:
 	CTECList();
-	int getSize();
-	Type get();
-	Type set();
-	Type remove();
-	void add();
-	void add();
+	int setSize();
+	Type getFromIndex(int index);
+	Type getFront();
+	Type getEnd();
+	Type set(int index, const Type& value);
+	Type removeFromFront();
+	Type removeFromEnd();
+	Type removeFromIndex();
+	void addToFront();
+	void addToEnd();
+	void addToIndex();
+	//void add();
 	virtual ~CTECList();
 };
 

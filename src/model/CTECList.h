@@ -26,10 +26,10 @@ public:
 	Type set(int index, const Type& value);
 	Type removeFromFront();
 	Type removeFromEnd();
-	Type removeFromIndex();
+	Type removeFromIndex(int index);
 	void addToFront();
 	void addToEnd();
-	void addToIndex();
+	void addToIndex(int index,const Type& value);
 	//void add();
 	virtual ~CTECList();
 };

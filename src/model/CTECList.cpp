@@ -6,6 +6,7 @@
  */
 
 #include "CTECList.h"
+#include <assert.h>
 
 template <class Type>
 CTECList<Type>::CTECList()
@@ -54,6 +55,8 @@ Type CTECList<Type>::removeFromFront()
 template <class Type>
 Type CTECList<Type>::removeFromEnd()
 {
+	//defencive code
+	assert(this->size > 0);
 	Type thingToRemove;
 	ArrayNode<Type> * newTail = new ArrayNode<Type>();
 	newTail = tail->getNext();
@@ -68,15 +71,35 @@ Type CTECList<Type>::removeFromEnd()
 template <class Type>
 Type CTECList<Type>::removeFromIndex(int index)
 {
-	Type thingToRemove;
-	for(index = 0;index < size;index++)
-	{
-		if()
-		{
 
-		}
+	assert(index >= 0);
+	assert(index < size);
+	assert(size > 0);
+	ArrayNode<Type> * deleteMe = new ArrayNode<Type>();
+	Type thingToRemove;
+	ArrayNode<Type> * newNext = new ArrayNode<Type>();
+	ArrayNode<Type> * previous = new ArrayNode<Type>();
+
+	if(index == 0){
+		thingToRemove = removeFromFront();
 	}
-	return thingToRemove;
+
+	else if(index == size-1)
+	{
+		thingToRemove = removeFromEnd();
+	}
+	else
+	{
+
+	for(int spot = 0; spot < index+1  ; spot++)
+	{
+
+	}
+
+	}
+	delete deleteMe;
+	ArrayNode<Type> * previous = newNext;
+	return deleteMe;
 }
 /**
  * sets the value in the list

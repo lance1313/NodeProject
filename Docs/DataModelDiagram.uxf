@@ -4,8 +4,8 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>182</x>
-      <y>91</y>
+      <x>112</x>
+      <y>0</y>
       <w>280</w>
       <h>133</h>
     </coordinates>
@@ -25,8 +25,8 @@ Construtors and methoids
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>70</x>
-      <y>301</y>
+      <x>0</x>
+      <y>210</y>
       <w>245</w>
       <h>140</h>
     </coordinates>
@@ -47,8 +47,8 @@ Construtors and methoids
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>182</x>
-      <y>217</y>
+      <x>112</x>
+      <y>126</y>
       <w>35</w>
       <h>98</h>
     </coordinates>
@@ -58,8 +58,8 @@ Construtors and methoids
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>399</x>
-      <y>315</y>
+      <x>329</x>
+      <y>224</y>
       <w>301</w>
       <h>140</h>
     </coordinates>
@@ -78,8 +78,8 @@ Construtors and methoids
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>308</x>
-      <y>385</y>
+      <x>238</x>
+      <y>294</y>
       <w>105</w>
       <h>21</h>
     </coordinates>
@@ -89,8 +89,8 @@ Construtors and methoids
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>98</x>
-      <y>511</y>
+      <x>28</x>
+      <y>420</y>
       <w>147</w>
       <h>189</h>
     </coordinates>
@@ -112,8 +112,8 @@ Construtors and methoids
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>154</x>
-      <y>434</y>
+      <x>84</x>
+      <y>343</y>
       <w>98</w>
       <h>91</h>
     </coordinates>
@@ -123,8 +123,8 @@ Construtors and methoids
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>392</x>
-      <y>525</y>
+      <x>329</x>
+      <y>434</y>
       <w>147</w>
       <h>259</h>
     </coordinates>
@@ -135,7 +135,7 @@ Construtors and methoids
 -end : arrayNode&lt;Type&gt;
 
 --
-
+- calculateSize : void
 + CTECList() : construtor
 + CTECList() : destrutor
 + getSize() : int
@@ -155,12 +155,12 @@ removeFromIndex(int index) : Type
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>280</x>
-      <y>434</y>
-      <w>126</w>
+      <x>210</x>
+      <y>343</y>
+      <w>133</w>
       <h>119</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>160.0;150.0;10.0;150.0;10.0;10.0</additional_attributes>
+    <additional_attributes>170.0;150.0;10.0;150.0;10.0;10.0</additional_attributes>
   </element>
 </diagram>

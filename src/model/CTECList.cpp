@@ -46,30 +46,52 @@ Type CTECList<Type>::removeFromFront()
 	delete head;
 	//move head to next
 	head = newHead;
-
+this->calculateSize;
 	return thingToRemove;
 }
 /**
  *this removes the last node ,and moves tail to the next node.
+ *this create return variable
+ *this loop the next to the last node
+ *this grab the value from the last node
+ *this delete last node
+ *this set new last node
  */
 template <class Type>
 Type CTECList<Type>::removeFromEnd()
 {
 	//defencive code
 	assert(this->size > 0);
-	Type thingToRemove;
+	Type returnValue;
 	ArrayNode<Type> * newTail = new ArrayNode<Type>();
 	ArrayNode<Type> * current = ArrayNode<Type>();
-	while(tail->getNext()->getNext())
-	{
 
+	if(size == 1)
+	{
+		ArrayNode<Type> * toRemove = tail;
+		returnValue = removeFromFront();
+		tail = nullptr;
 	}
 
-	thingToRemove = this->tail->getValue();
-	delete tail;
-	newTail = tail->getNext();
-	tail = newTail;
-	return thingToRemove;
+	else
+	{
+ArrayNode<Type> * current = head;
+for(int index = 0; index < size-1; index ++)
+{
+	current = current->getNext();
+}
+
+
+	returnValue = tail->getValue();
+		delete tail;
+		current = newTail;
+		calculateSize();
+	current->setNext(nullptr);
+	}
+
+
+
+	return returnValue;
 }
 /**
  *remove node from specified spot
@@ -84,6 +106,7 @@ Type CTECList<Type>::removeFromIndex(int index)
 	ArrayNode<Type> * deleteMe = new ArrayNode<Type>();
 	Type thingToRemove;
 	ArrayNode<Type> * newNext = new ArrayNode<Type>();
+	ArrayNode<Type> * current = new ArrayNode<Type>();
 	ArrayNode<Type> * previous = new ArrayNode<Type>();
 
 	if(index == 0){
@@ -97,14 +120,15 @@ Type CTECList<Type>::removeFromIndex(int index)
 	else
 	{
 
-		for(int spot = 0; spot < index+1  ; spot++)
+		for(int spot = 0; spot < spot  ; spot++)
 		{
 
-
+			current = current->next();
 
 		}
 		ArrayNode<Type> * previous = newNext;
 		delete deleteMe;
+		this->calculateSize;
 		return deleteMe;
 	}
 }
@@ -114,7 +138,34 @@ Type CTECList<Type>::removeFromIndex(int index)
 template <class Type>
 Type CTECList<Type>::set(int index, const Type& value)
 {
+	assert(this->size > 0);
+		ArrayNode<Type> * previous = ArrayNode<Type>();
+		ArrayNode<Type> * insert = previous;
+		ArrayNode<Type> * current = ArrayNode<Type>();
+		ArrayNode<Type> * newNode = ArrayNode<Type>();
 
+
+		if(index == 0)
+		{
+			current->addToFront();
+		}
+
+		else if( index == size - 1)
+		{
+			current->addToEnd();
+		}
+
+		else
+		{
+
+		for(index = 0;index < size -1;index++)
+			{
+			current = current->next;
+			}
+		current = head;
+		calculateSize();
+
+		}
 }
 
 /**
@@ -139,10 +190,13 @@ Type CTECList<Type>::getEnd()
 template <class Type>
 Type CTECList<Type>::getFromIndex(int index)
 {
+	ArrayNode<Type> * current = new ArrayNode<Type>();
+
 	for(index = 0;index < size;index++)
 		{
-
+		current = current->getNext();
 		}
+	return  current;//  uqd9g o8he178w5 o8i3w 09i3j9dh
 
 }
 /**
@@ -152,6 +206,14 @@ template <class Type>
 void CTECList<Type>::addToFront()
 {
 	ArrayNode<Type> * newHead = ArrayNode<Type>();
+	ArrayNode<Type> * current = ArrayNode<Type>();
+	newHead = head;
+
+	current->setNext();
+
+
+
+	this->calculateSize;
 }
 /**
  *add to the end of the list
@@ -159,39 +221,47 @@ void CTECList<Type>::addToFront()
 template <class Type>
 void CTECList<Type>::addToEnd()
 {
+	ArrayNode<Type> * newTail = ArrayNode<Type>();
+	newTail = tail;
 
+
+	this->calculateSize;
 }
 /**
- *add node at specified spot in list
+ *
+ *
  */
 template <class Type>
 void CTECList<Type>::addToIndex(int index,const Type& value)
 {
 	assert(this->size > 0);
 	ArrayNode<Type> * previous = ArrayNode<Type>();
-	ArrayNode<Type> * insert = ArrayNode<Type>();
+	ArrayNode<Type> * insert = previous;
 	ArrayNode<Type> * current = ArrayNode<Type>();
+	current = head;
 
-	if(index == 1)
+	if(index == 0)
 	{
-
+		current->addToFront();
 	}
 
-	else if( index == 0)
+	else if( index == size - 1)
 	{
-
+		current->addToEnd();
 	}
 
-	else{
+	else
+	{
 
 	for(index = 0;index < size -1;index++)
 		{
 
 
-
-		current = current->next;
+		current = current->getNext();
 		}
 	}
+	this->calculateSize;
+
 }
 
 template <class Type>
@@ -217,6 +287,7 @@ void CTECList<Type> :: calculateSize()
 			//use to leave the loop
 			current = current->getNext();
 		}
+		size = count;
 	}
 }
 

@@ -16,7 +16,7 @@ private:
 int size;
 ArrayNode<Type> * head;
 ArrayNode<Type> * tail;
-void calculateSize;
+
 
 public:
 	CTECList();
@@ -31,6 +31,7 @@ public:
 	void addToFront();
 	void addToEnd();
 	void addToIndex(int index,const Type& value);
+	void calculateSize();
 	//void add();
 	virtual ~CTECList();
 };

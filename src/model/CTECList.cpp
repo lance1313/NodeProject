@@ -120,7 +120,7 @@ Type CTECList<Type>::removeFromIndex(int index)
 	else
 	{
 
-		for(int spot = 0; spot < spot  ; spot++)
+		for(int spot = 0; spot < size  ; spot++)
 		{
 
 			current = current->next();
@@ -190,13 +190,29 @@ Type CTECList<Type>::getEnd()
 template <class Type>
 Type CTECList<Type>::getFromIndex(int index)
 {
+	assert(this->size > 0);
+	assert(index >= size);
 	ArrayNode<Type> * current = new ArrayNode<Type>();
+	ArrayNode<Type> * next = new ArrayNode<Type>();
 
+	if(index == 0)
+			{
+				current->getFront;
+			}
+
+			else if( index == size - 1)
+			{
+				current->getEnd();
+			}
+
+			else
+			{
 	for(index = 0;index < size;index++)
 		{
 		current = current->getNext();
 		}
-	return  current;//  uqd9g o8he178w5 o8i3w 09i3j9dh
+			}
+	return  current->getValue();//  uqd9g o8he178w5
 
 }
 /**
@@ -222,8 +238,9 @@ template <class Type>
 void CTECList<Type>::addToEnd()
 {
 	ArrayNode<Type> * newTail = ArrayNode<Type>();
+	ArrayNode<Type> * current = ArrayNode<Type>();
 	newTail = tail;
-
+	current->setNext();
 
 	this->calculateSize;
 }

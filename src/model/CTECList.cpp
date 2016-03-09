@@ -118,6 +118,7 @@ Type CTECList<Type>::removeFromIndex(int index)
 		thingToRemove = removeFromEnd();
 	}
 	else
+
 	{
 
 		for(int spot = 0; spot < size  ; spot++)
@@ -163,6 +164,7 @@ Type CTECList<Type>::set(int index, const Type& value)
 			current = current->next;
 			}
 		current = head;
+		return current->getValue();
 		calculateSize();
 
 		}

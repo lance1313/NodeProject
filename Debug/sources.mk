@@ -25,5 +25,4 @@ CPP_DEPS :=
 SUBDIRS := \
 src/controller \
 src/model \
-src/test \
 

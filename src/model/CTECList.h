@@ -8,6 +8,7 @@
 #ifndef SRC_MODEL_CTECLIST_H_
 #define SRC_MODEL_CTECLIST_H_
 #include "ArrayNode.h"
+#include "NodeController.h"
 
 template <class Type>
 class CTECList
@@ -28,7 +29,7 @@ public:
 	Type removeFromFront();
 	Type removeFromEnd();
 	Type removeFromIndex(int index);
-	void addToFront();
+	void addToFront(const Type& value);
 	void addToEnd();
 	void addToIndex(int index,const Type& value);
 	void calculateSize();

@@ -8,7 +8,7 @@
 #ifndef SRC_MODEL_CTECLIST_H_
 #define SRC_MODEL_CTECLIST_H_
 #include "ArrayNode.h"
-#include "NodeController.h"
+//#include "../model/NodeController.h"
 
 template <class Type>
 class CTECList

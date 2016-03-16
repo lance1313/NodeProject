@@ -240,8 +240,8 @@ Type CTECList<Type>::getFromIndex(int index)
 template <class Type>
 void CTECList<Type>::addToFront(const Type& value)
 {
-	ArrayNode<Type> * newHead = ArrayNode<Type>(value,head);
-	//ArrayNode<Type> * current = ArrayNode<Type>();
+	ArrayNode<Type> * newHead = ArrayNode<Type>();
+	ArrayNode<Type> * current = ArrayNode<Type>();
 
 	newHead = head;
 

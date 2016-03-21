@@ -10,7 +10,7 @@ int main()
 {
 
 	NodeController * baseController = new NodeController();
-	baseController->start();
+	baseController->testLists();
 return 0;
 }
 
